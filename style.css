@@ -1,0 +1,302 @@
+
+:root {
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --text-main: #e0e0e0;
+    --text-sec: #aaaaaa;
+    --accent: #ffffff;
+    --border: #333333;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+}
+
+
+header {
+    background-color: #000000;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 1px solid var(--border);
+    gap: 15px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--accent);
+    letter-spacing: 1px;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    flex-grow: 1;
+    max-width: 600px;
+    margin: 0 20px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--border);
+    background-color: #222;
+    color: var(--accent);
+    outline: none;
+}
+
+.nav-btn {
+    background: transparent;
+    color: var(--text-sec);
+    border: 1px solid var(--border);
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.nav-btn.active, .nav-btn:hover {
+    background-color: var(--accent);
+    color: #000;
+    border-color: var(--accent);
+}
+
+
+.section-title {
+    padding: 1.5rem 2rem 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--accent);
+}
+
+.movie-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    padding: 2rem;
+}
+
+
+.card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    transition: transform 0.3s;
+    border: 1px solid var(--border);
+    position: relative;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #555;
+}
+
+.card img {
+    width: 100%;
+    height: 350px;
+    object-fit: contain; /* Değişen kısım: Resmi kesme, sığdır */
+    background-color: #000; /* Boş kalan yerler siyah olsun */
+    opacity: 0.9;
+    transition: opacity 0.3s;
+}
+
+.card:hover img { opacity: 1; }
+
+.card-info { padding: 1rem; }
+
+.card-info h3 {
+    margin: 0 0 5px;
+    font-size: 1.1rem;
+    color: var(--accent);
+}
+
+.card-info p {
+    color: var(--text-sec);
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+.rating {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0,0,0,0.8);
+    color: #4cd137;
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 1px solid #4cd137;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    align-items: center;
+    justify-content: center;
+    
+    /* Mevcut kodların aynen kalsın, sadece transition ekle */
+    display: none;
+    /* ...diğer kodlar... */
+    transition: opacity 0.3s ease; /* Yumuşak geçiş */
+}
+
+
+.modal-content {
+    background-color: #151515;
+    border: 1px solid #444;
+    padding: 25px;
+    width: 90%;
+    max-width: 700px;
+    border-radius: 10px;
+    position: relative;
+    animation: modalPop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Yaylanma efekti */
+}
+
+.modal-flex {
+    display: flex;
+    gap: 20px;
+}
+
+.modal-flex img {
+    width: 250px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.modal-info { text-align: left; color: #ddd; }
+.modal-info h2 { color: white; margin-top: 0; }
+.category-text { color: #888; margin-bottom: 10px; font-style: italic; }
+.cast-text { color: #ccc; margin-top: 15px; }
+.badge { background: #333; padding: 5px 10px; border-radius: 4px; font-size: 0.9rem; margin-right: 10px; }
+.rating-badge { color: #4cd137; border: 1px solid #4cd137; }
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.modal-fav-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.modal-fav-btn:hover, .modal-fav-btn.added {
+    background-color: var(--accent);
+    color: #000;
+}
+
+@media (max-width: 700px) {
+    .modal-flex { flex-direction: column; }
+    .modal-flex img { width: 100%; height: 250px; }
+    header { flex-direction: column; }
+    .search-box { width: 100%; margin: 10px 0; }
+}
+/* --- Favorileri Temizle Butonu ve Başlık Düzeni --- */
+.header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 2rem; /* Sağdan biraz boşluk bırak */
+}
+
+.clear-btn {
+    background-color: #e74c3c; 
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: 0.3s;
+    display: none; /* Başlangıçta gizli */
+    align-items: center;
+    gap: 8px;
+}
+
+.clear-btn:hover {
+    background-color: #c0392b; /* Üzerine gelince koyulaşsın */
+    transform: scale(1.05); /* Hafif büyüsün */
+}
+/*BONUS: CSS AnimasyonlarI */
+
+/*  Kartların Geliş Animasyonu */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px); /* Aşağıdan başla */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Yerine gel */
+    }
+}
+
+/* Bu animasyonu kartlara uygula */
+.card {
+    /* Mevcut kodlarının altına bu satırı ekle */
+    animation: fadeInUp 0.6s ease-out forwards; 
+}
+
+/* Kartların üzerine gelince oluşan efektin biraz daha yumuşak olması */
+.card:hover {
+    transform: translateY(-10px) scale(1.02); /* Biraz büyüterek yukarı kaldır */
+    box-shadow: 0 15px 30px rgba(255, 255, 255, 0.1); /* Parlama efekti */
+}
+@keyframes modalPop {
+    from {
+        opacity: 0;
+        transform: scale(0.7); /* Küçük başla */
+    }
+    to {
+        opacity: 1;
+        transform: scale(1); /* Normal boyuta gel */
+    }
+}
+/* --- BONUS: Erişilebilirlik (A11y) --- */
+/* Klavye ile (TAB tuşuyla) gezinenler için odaklanma efekti */
+
+button:focus, 
+input:focus, 
+select:focus, 
+.card:focus {
+    outline: 2px solid #ffffff; /* Beyaz çerçeve */
+    outline-offset: 4px; /* Çerçeve ile eleman arası boşluk */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Hafif beyaz ışık */
+}
+
+/* Erişilebilirlik için butonların tıklanabilir olduğunu belli et */
+button {
+    cursor: pointer;
+}

@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "title": "Big Hero 6",
+    "category": "Çocuk/Aksiyon",
+    "year": 2014,
+    "rating": 7.8,
+    "image": "img/bighero6.jpg",
+    "desc": "Robot teknolojisi dehası Hiro Hamada, bir suç örgütünü durdurmak için Baymax ve arkadaşlarıyla bir kahraman ekibi kurar.",
+    "cast": "Ryan Potter, Scott Adsit, Daniel Henney"
+  },
+  {
+    "id": 2,
+    "title": "Zootropolis",
+    "category": "Çocuk/Komedi",
+    "year": 2016,
+    "rating": 8.0,
+    "image": "img/zootropolis.jpg",
+    "desc": "Polis memuru olmak isteyen tavşan Judy Hopps, kurnaz bir tilki ile iş birliği yaparak gizemli bir olayı çözmeye çalışır.",
+    "cast": "Ginnifer Goodwin, Jason Bateman, Idris Elba"
+  },
+  {
+    "id": 3,
+    "title": "Sünger Bob",
+    "category": "Çocuk Dizisi",
+    "year": 1999,
+    "rating": 8.2,
+    "image": "img/sungerbob.jpg",
+    "desc": "Bikini Kasabası'nda yaşayan iyimser sünger Bob ve arkadaşlarının su altındaki eğlenceli maceraları.",
+    "cast": "Tom Kenny, Bill Fagerbakke, Rodger Bumpass"
+  },
+  {
+    "id": 4,
+    "title": "The Witcher",
+    "category": "Drama/Fantastik",
+    "year": 2019,
+    "rating": 7.9,
+    "image": "img/witcher.jpg",
+    "desc": "Mutasyona uğramış bir canavar avcısı olan Rivialı Geralt, insanların canavarlardan daha kötü olduğu bir dünyada yerini arar.",
+    "cast": "Henry Cavill, Anya Chalotra, Freya Allan"
+  },
+  {
+    "id": 5,
+    "title": "Merlin",
+    "category": "Drama/Fantastik",
+    "year": 2008,
+    "rating": 7.9,
+    "image": "img/merlin.jpg",
+    "desc": "Genç büyücü Merlin, Kral Arthur efsanesinin öncesinde, büyünün yasak olduğu Camelot krallığında yeteneklerini gizlemek zorundadır.",
+    "cast": "Colin Morgan, Bradley James, Katie McGrath"
+  },
+  {
+    "id": 6,
+    "title": "Sürekli Dizi",
+    "category": "Durum Komedisi",
+    "year": 2010,
+    "rating": 8.0,
+    "image": "img/sureklidizi.jpg",
+    "desc": "Mordecai ve Rigby adlı iki park çalışanı, işten kaytarmak için her yolu denerken sürreal maceralara atılırlar.",
+    "cast": "J.G. Quintel, William Salyers, Sam Marin"
+  },
+  {
+    "id": 7,
+    "title": "(500) Days of Summer",
+    "category": "Romantik/Komedi",
+    "year": 2009,
+    "rating": 7.6,
+    "image": "img/500days.jpg",
+    "desc": "Aşka inanmayan bir kadın ile ona aşık olan bir adamın 500 gün süren inişli çıkışlı ilişkisinin hikayesi.",
+    "cast": "Joseph Gordon-Levitt, Zooey Deschanel, Geoffrey Arend"
+  },
+  {
+    "id": 8,
+    "title": "Mouse",
+    "category": "Gerilim",
+    "year": 2021,
+    "rating": 8.6,
+    "image": "img/mouse.jpg",
+    "desc": "Psikopat geni taşıyan katillerin önceden tespit edilebildiği bir dünyada, çaylak bir polis memuru seri katille yüzleşir.",
+    "cast": "Lee Seung-gi, Lee Hee-joon, Park Ju-hyun"
+  }
+]
